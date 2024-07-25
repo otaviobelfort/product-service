@@ -1,0 +1,17 @@
+
+services:
+  db:
+    image: postgres:13  # Especifique a imagem do PostgreSQL
+    container_name: postgres_container  # Nome do container
+    environment:
+      POSTGRES_USER: admin  # Nome de usuário do PostgreSQL
+      POSTGRES_PASSWORD: admin  # Senha do PostgreSQL
+      POSTGRES_DB: postgres  # Nome do banco de dados
+    ports:
+      - "5432:5432"  # Mapeamento de portas (host:container)
+    volumes:
+      - db_data:/var/lib/postgresql/data  # Persistência de dados
+
+volumes:
+  db_data:
+    driver: local

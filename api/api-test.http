@@ -1,0 +1,22 @@
+### GET request to example server
+GET 192.168.100.3:8000/products
+
+
+### POST request to example server
+POST localhost:8000/product
+Content-Type: application/json
+
+{
+    "name": "Celular",
+    "price": 1000
+}
+
+### POST request to example user
+POST localhost:8000/users
+Content-Type: application/json
+
+{
+  "name": "João",
+  "email": "joao@gmail.com",
+  "password":"123456"
+}
